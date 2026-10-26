@@ -26,6 +26,12 @@ test("기존 리포는 사람이 쓴 설명을 유지하고 수치만 갱신한�
   assert.equal(t.archived, true);
 });
 
+test("같은 날 다시 돌리면 마지막 칸을 덮어쓴다", () => {
+  const prev: Tool = { ...applyRepo(undefined, repo, "mcp"), starHistory: [100, 110] };
+  assert.deepEqual(applyRepo(prev, repo, "mcp", true).starHistory, [100, 120]);
+  assert.deepEqual(applyRepo(undefined, repo, "mcp", true).starHistory, [120]);
+});
+
 test("스타 기록은 최근 30개만 남긴다", () => {
   const prev: Tool = { ...applyRepo(undefined, repo, "mcp"), starHistory: Array.from({ length: 30 }, (_, i) => i) };
   const t = applyRepo(prev, repo, "mcp");

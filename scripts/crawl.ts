@@ -29,11 +29,12 @@ async function gh<T>(path: string): Promise<T> {
 
 const data = JSON.parse(await readFile(FILE, "utf8")) as { updatedAt: string; tools: Tool[] };
 const byRepo = new Map(data.tools.map((t) => [t.repo.toLowerCase(), t]));
+const sameDay = data.updatedAt.slice(0, 10) === new Date().toISOString().slice(0, 10);
 let updated = 0;
 
 for (const t of data.tools) {
   try {
-    const next = applyRepo(t, await gh<Repo>(`/repos/${t.repo}`), t.category);
+    const next = applyRepo(t, await gh<Repo>(`/repos/${t.repo}`), t.category, sameDay);
     // 이름이 바뀐 리포는 GitHub이 새 이름으로 돌려준다. 새 키로 옮겨야 검색 결과와 중복되지 않는다.
     byRepo.delete(t.repo.toLowerCase());
     byRepo.set(next.repo.toLowerCase(), next);

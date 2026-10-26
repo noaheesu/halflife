@@ -14,7 +14,9 @@ export type Repo = {
 };
 
 // 사람이 고친 필드(이름, 설명, 카테고리, 태그)는 유지하고 수치만 GitHub 값으로 갱신한다.
-export function applyRepo(prev: Tool | undefined, r: Repo, category: Category): Tool {
+// sameDay: 직전 크롤링이 오늘이면 기록을 새로 쌓지 않고 마지막 칸을 덮어쓴다 (하루 1칸 유지).
+export function applyRepo(prev: Tool | undefined, r: Repo, category: Category, sameDay = false): Tool {
+  const history = prev?.starHistory ?? [];
   return {
     id: prev?.id ?? r.full_name.toLowerCase().replace("/", "-"),
     name: prev?.name ?? r.name,
@@ -23,8 +25,7 @@ export function applyRepo(prev: Tool | undefined, r: Repo, category: Category): 
     category: prev?.category ?? category,
     tags: prev?.tags ?? (r.topics ?? []).slice(0, 3),
     stars: r.stargazers_count,
-    // shortcut: 실행할 때마다 1칸씩 쌓는다. 하루 1회 실행을 전제로 하며, 여러 번 돌리면 날짜를 같이 저장하도록 바꾼다.
-    starHistory: [...(prev?.starHistory ?? []), r.stargazers_count].slice(-HISTORY_DAYS),
+    starHistory: [...(sameDay ? history.slice(0, -1) : history), r.stargazers_count].slice(-HISTORY_DAYS),
     lastCommit: r.pushed_at.slice(0, 10), // 커밋 API를 따로 부르지 않으려고 마지막 push 시각을 쓴다
     archived: r.archived,
   };
