@@ -5,7 +5,7 @@
       "id": "awesome-claude-code",
       "name": "awesome-claude-code",
       "repo": "hesreallyhim/awesome-claude-code",
-      "description": "스킬, 훅, 에이전트, 플러그인을 사람이 직접 고른 목록",
+      "description": "Hand-picked list of Claude Code skills, hooks, agents and plugins",
       "category": "guides",
       "tags": [
         "curated",
@@ -16,13 +16,14 @@
         56546
       ],
       "lastCommit": "2026-10-26",
-      "archived": false
+      "archived": false,
+      "descriptionKo": "스킬, 훅, 에이전트, 플러그인을 사람이 직접 고른 목록"
     },
     {
       "id": "awesome-mcp-servers",
       "name": "awesome-mcp-servers",
       "repo": "punkpeye/awesome-mcp-servers",
-      "description": "MCP 서버 분야별 모음",
+      "description": "MCP servers organized by category",
       "category": "mcp",
       "tags": [
         "mcp",
@@ -33,13 +34,14 @@
         96871
       ],
       "lastCommit": "2026-10-23",
-      "archived": false
+      "archived": false,
+      "descriptionKo": "MCP 서버 분야별 모음"
     },
     {
       "id": "playwright-mcp",
       "name": "Playwright MCP",
       "repo": "microsoft/playwright-mcp",
-      "description": "접근성 트리로 웹 페이지를 읽고 조작하는 브라우저 자동화 서버",
+      "description": "Browser automation server that reads pages through the accessibility tree",
       "category": "mcp",
       "tags": [
         "browser",
@@ -50,13 +52,14 @@
         38635
       ],
       "lastCommit": "2026-10-22",
-      "archived": false
+      "archived": false,
+      "descriptionKo": "접근성 트리로 웹 페이지를 읽고 조작하는 브라우저 자동화 서버"
     },
     {
       "id": "context7",
       "name": "Context7",
       "repo": "upstash/context7",
-      "description": "라이브러리 최신 문서를 프롬프트에 넣어주는 MCP 서버",
+      "description": "MCP server that puts up-to-date library docs into your prompt",
       "category": "mcp",
       "tags": [
         "docs",
@@ -67,13 +70,14 @@
         63684
       ],
       "lastCommit": "2026-10-23",
-      "archived": false
+      "archived": false,
+      "descriptionKo": "라이브러리 최신 문서를 프롬프트에 넣어주는 MCP 서버"
     },
     {
       "id": "awesome-claude-plugins",
       "name": "awesome-claude-plugins",
       "repo": "composio-community/awesome-claude-plugins",
-      "description": "/plugin marketplace add 로 바로 쓰는 커뮤니티 마켓",
+      "description": "Community marketplace you can add with /plugin marketplace add",
       "category": "claude-code",
       "tags": [
         "plugins",
@@ -84,13 +88,14 @@
         1965
       ],
       "lastCommit": "2026-07-26",
-      "archived": false
+      "archived": false,
+      "descriptionKo": "/plugin marketplace add 로 바로 쓰는 커뮤니티 마켓"
     },
     {
       "id": "anthropic-skills",
       "name": "Anthropic Skills",
       "repo": "anthropics/skills",
-      "description": "공식 Agent Skills 예제 모음 (문서, 디자인, 개발 도구)",
+      "description": "Official Agent Skills examples (documents, design, dev tools)",
       "category": "skills",
       "tags": [
         "skills",
@@ -101,7 +106,8 @@
         183787
       ],
       "lastCommit": "2026-10-09",
-      "archived": false
+      "archived": false,
+      "descriptionKo": "공식 Agent Skills 예제 모음 (문서, 디자인, 개발 도구)"
     },
     {
       "id": "morluto-rea",

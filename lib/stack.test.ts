@@ -5,7 +5,7 @@ import type { RankedTool, Swap } from "./types.ts";
 
 const tool = (repo: string, extra: Partial<RankedTool> = {}): RankedTool => ({
   id: repo, name: repo, repo, description: "", category: "mcp", tags: [], stars: 0, starHistory: [],
-  lastCommit: "2026-10-01", archived: false, freshness: 90, starGain: 0, gainDays: 0, ...extra,
+  lastCommit: "2026-10-01", archived: false, freshness: 90, starGain: 0, gainDays: 0, idleDays: 0, ...extra,
 });
 const tools = [
   tool("microsoft/playwright-mcp"),
@@ -14,8 +14,8 @@ const tools = [
   tool("n8n-io/n8n"),
 ];
 const swaps: Swap[] = [{
-  id: "p", category: "mcp", match: ["server-puppeteer"], reason: "", effort: "",
-  from: { name: "Puppeteer MCP", detail: "", status: "archived" }, to: { name: "Playwright MCP", detail: "" },
+  id: "p", category: "mcp", match: ["server-puppeteer"], reason: { en: "", ko: "" }, effort: { en: "", ko: "" },
+  from: { name: { en: "Puppeteer MCP", ko: "Puppeteer MCP" }, detail: "", status: "archived" }, to: { name: "Playwright MCP", detail: "" },
 }];
 
 const config = JSON.stringify({

@@ -1,77 +1,98 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+import { fill, type Dict, type Lang } from "@/lib/i18n";
 import type { Category, RankedTool, Swap } from "@/lib/types";
+import Legend from "./Legend";
 import StackPanel from "./StackPanel";
 import SwapCard from "./SwapCard";
 import TrendingRow from "./TrendingRow";
 
-const CATEGORIES: { id: Category | "all"; label: string }[] = [
-  { id: "all", label: "전체" },
-  { id: "claude-code", label: "Claude Code" },
-  { id: "mcp", label: "MCP 서버" },
-  { id: "skills", label: "Skills" },
-  { id: "agents", label: "에이전트" },
-  { id: "guides", label: "사용법·모음" },
-];
-
+const CATEGORIES = ["all", "claude-code", "mcp", "skills", "agents", "guides"] as const;
 const TRENDING_LIMIT = 20;
 
-export default function Feed({ tools, swaps, updatedAt }: { tools: RankedTool[]; swaps: Swap[]; updatedAt: string }) {
+type Props = { lang: Lang; t: Dict; tools: RankedTool[]; swaps: Swap[]; updatedAt: string };
+
+export default function Feed({ lang, t, tools, swaps, updatedAt }: Props) {
   const [category, setCategory] = useState<Category | "all">("all");
   const [query, setQuery] = useState("");
 
   const q = query.trim().toLowerCase();
   const inCategory = (c: Category) => category === "all" || c === category;
   const visibleTools = tools
-    .filter((t) => inCategory(t.category) && (!q || `${t.name} ${t.description} ${t.tags.join(" ")}`.toLowerCase().includes(q)))
+    .filter(
+      (x) =>
+        inCategory(x.category) &&
+        (!q || `${x.name} ${x.description} ${x.descriptionKo ?? ""} ${x.tags.join(" ")}`.toLowerCase().includes(q)),
+    )
     .slice(0, TRENDING_LIMIT);
   const visibleSwaps = swaps.filter(
-    (s) => inCategory(s.category) && (!q || `${s.from.name} ${s.to.name} ${s.reason}`.toLowerCase().includes(q)),
+    (s) =>
+      inCategory(s.category) &&
+      (!q || `${s.from.name[lang]} ${s.to.name} ${s.reason[lang]}`.toLowerCase().includes(q)),
   );
 
   return (
     <>
       <header className="header">
         <div className="bar">
-          <div className="logo">
+          <Link href={lang === "en" ? "/" : "/ko"} className="logo">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2" />
               <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" />
             </svg>
             Halflife
-          </div>
+          </Link>
           <label className="search">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
               <path d="m20 20-3.5-3.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </svg>
             <input
+              id="search"
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="'브라우저 자동화'처럼 하고 싶은 일로 검색"
-              aria-label="도구 검색"
+              placeholder={t.searchPlaceholder}
+              aria-label={t.searchLabel}
             />
           </label>
+          <nav className="langs" aria-label="Language">
+            <Link href="/" aria-current={lang === "en" ? "page" : undefined}>EN</Link>
+            <Link href="/ko" aria-current={lang === "ko" ? "page" : undefined}>한국어</Link>
+          </nav>
         </div>
       </header>
 
       <div className="wrap">
-        <div className="intro">
-          <h1>지난주 플러그인이 벌써 구버전이 됐다면</h1>
-          <p>Claude Code, MCP, 에이전트 도구를 매일 모아서 정리하고, 더 나은 게 나오면 무엇으로 바꾸면 되는지까지 알려줍니다.</p>
-          <div className="meta">
-            <span>업데이트 <b>{updatedAt.slice(0, 10)}</b></span>
-            <span>추적 중 <b>{tools.length}</b>개 리포</span>
-            <span>교체 추천 <b>{swaps.length}</b>건</span>
+        <section className="hero">
+          <div className="hero-text">
+            <h1>{t.heroTitle}</h1>
+            <p className="lead">{t.heroLead}</p>
+            <p className="meta">
+              <span>{t.updated} <b>{updatedAt.slice(0, 10)}</b></span>
+              <span>{fill(t.tracked, { n: tools.length })}</span>
+              <span>{fill(t.swapCount, { n: swaps.length })}</span>
+            </p>
           </div>
-        </div>
+          <ol className="steps">
+            {t.steps.map((s, i) => (
+              <li key={s.title}>
+                <span className="step-n">{i + 1}</span>
+                <div>
+                  <h3>{s.title}</h3>
+                  <p>{fill(s.body, { n: tools.length })}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
 
-        <div className="chips" role="group" aria-label="카테고리">
+        <div className="chips" role="group" aria-label={t.categoryLabel}>
           {CATEGORIES.map((c) => (
-            <button key={c.id} className="chip" aria-pressed={category === c.id} onClick={() => setCategory(c.id)}>
-              {c.label}
+            <button key={c} className="chip" aria-pressed={category === c} onClick={() => setCategory(c)}>
+              {t.categories[c]}
             </button>
           ))}
         </div>
@@ -79,27 +100,32 @@ export default function Feed({ tools, swaps, updatedAt }: { tools: RankedTool[];
         <div className="grid">
           <main>
             <section>
-              <h2>교체 추천</h2>
-              <p className="sub">쓰던 도구보다 나은 대안이 나왔습니다. 이유와 옮기는 방법을 같이 보여줍니다.</p>
+              <h2>{t.swapsTitle}</h2>
+              <p className="sub">{t.swapsSub}</p>
               {visibleSwaps.length ? (
-                <div className="swaps">{visibleSwaps.map((s) => <SwapCard key={s.id} swap={s} />)}</div>
+                <div className="swaps">{visibleSwaps.map((s) => <SwapCard key={s.id} swap={s} lang={lang} t={t} />)}</div>
               ) : (
-                <p className="empty">이 조건에 맞는 교체 추천이 아직 없습니다.</p>
+                <p className="empty">{t.swapsEmpty}</p>
               )}
             </section>
 
             <section>
-              <h2>이번 주 급상승</h2>
-              <p className="sub">최근 7일 동안 스타가 많이 늘어난 순서입니다. 막대는 마지막 커밋 기준 신선도입니다.</p>
+              <h2>{t.trendingTitle}</h2>
+              <p className="sub">{t.trendingSub}</p>
+              <Legend t={t} />
               {visibleTools.length ? (
-                <ol className="list">{visibleTools.map((t, i) => <TrendingRow key={t.id} tool={t} rank={i + 1} />)}</ol>
+                <ol className="list">
+                  {visibleTools.map((x, i) => <TrendingRow key={x.id} tool={x} rank={i + 1} lang={lang} t={t} />)}
+                </ol>
               ) : (
-                <p className="empty">검색 결과가 없습니다. 다른 단어로 찾아보세요.</p>
+                <p className="empty">{t.trendingEmpty}</p>
               )}
             </section>
           </main>
 
-          <StackPanel tools={tools} swaps={swaps} />
+          <aside>
+            <StackPanel tools={tools} swaps={swaps} t={t} />
+          </aside>
         </div>
       </div>
     </>

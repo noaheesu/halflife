@@ -22,6 +22,7 @@ export function applyRepo(prev: Tool | undefined, r: Repo, category: Category, s
     name: prev?.name ?? r.name,
     repo: r.full_name,
     description: prev?.description ?? r.description ?? "",
+    descriptionKo: prev?.descriptionKo,
     category: prev?.category ?? category,
     tags: prev?.tags ?? (r.topics ?? []).slice(0, 3),
     stars: r.stargazers_count,

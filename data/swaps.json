@@ -2,19 +2,33 @@
   {
     "id": "puppeteer-to-playwright",
     "category": "mcp",
-    "from": { "name": "Puppeteer MCP", "detail": "reference server · 보관됨", "status": "archived" },
+    "from": {
+      "name": { "en": "Puppeteer MCP", "ko": "Puppeteer MCP" },
+      "detail": "@modelcontextprotocol/server-puppeteer",
+      "status": "archived"
+    },
     "to": { "name": "Playwright MCP", "detail": "microsoft/playwright-mcp" },
-    "reason": "원래 서버는 더 이상 관리되지 않습니다. 스크린샷 대신 접근성 트리로 페이지를 읽어서 토큰을 덜 쓰고, 여러 브라우저를 지원합니다.",
-    "effort": "설정 1줄 변경",
+    "reason": {
+      "en": "The original reference server is no longer maintained. Playwright MCP reads pages through the accessibility tree instead of screenshots, so it uses fewer tokens and works across Chromium, Firefox and WebKit.",
+      "ko": "원래 서버는 더 이상 관리되지 않습니다. Playwright MCP는 스크린샷 대신 접근성 트리로 페이지를 읽어서 토큰을 덜 쓰고, Chromium, Firefox, WebKit을 모두 지원합니다."
+    },
+    "effort": { "en": "One-line config change", "ko": "설정 1줄 변경" },
     "match": ["server-puppeteer", "puppeteer-mcp"]
   },
   {
     "id": "commands-to-skills",
     "category": "skills",
-    "from": { "name": "커스텀 슬래시 커맨드", "detail": ".claude/commands/*.md", "status": "working" },
+    "from": {
+      "name": { "en": "Custom slash commands", "ko": "커스텀 슬래시 커맨드" },
+      "detail": ".claude/commands/*.md",
+      "status": "working"
+    },
     "to": { "name": "Agent Skills", "detail": ".claude/skills/*/SKILL.md" },
-    "reason": "필요할 때만 불러오는 방식이라 컨텍스트를 덜 차지하고, 스크립트와 참고 파일을 같이 묶을 수 있습니다. 기존 커맨드도 계속 동작합니다.",
-    "effort": "점진 이전 가능",
+    "reason": {
+      "en": "Skills load only when they are needed, so they take less context, and they can bundle scripts and reference files. Your existing commands keep working, so you can move them one at a time.",
+      "ko": "필요할 때만 불러오는 방식이라 컨텍스트를 덜 차지하고, 스크립트와 참고 파일을 같이 묶을 수 있습니다. 기존 커맨드도 계속 동작하니 하나씩 옮기면 됩니다."
+    },
+    "effort": { "en": "Migrate gradually", "ko": "점진 이전 가능" },
     "match": []
   }
 ]
