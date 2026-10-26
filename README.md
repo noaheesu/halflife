@@ -54,7 +54,7 @@ data/
 
 1. 봇 커밋 후 Vercel이 자동 배포하는지 확인. 안 되면(Hobby 플랜의 비공개 리포 제한) 워크플로에서 Deploy Hook을 호출한다.
 2. 휴대폰 화면은 아직 직접 확인하지 못했다.
-3. 교체 추천이 2건뿐이다. 실제 대체 관계를 조사해서 늘려야 한다.
+3. 교체 추천 9건(보관 처리된 MCP 참조 서버 위주). 남은 후보: gdrive, google-maps, sqlite처럼 뚜렷한 대체재가 아직 없는 서버, 그리고 MCP 말고 Skills/Agents 카테고리.
 4. Claude API 키가 생기면: 크롤링한 리포의 한국어 설명 자동 생성, 관리가 끊긴 도구의 대안 자동 추천.
 5. 경계에 있는 리포 검토: career-ops, open-design, cain-agent.
 6. Vercel 프로젝트 이름을 바꿔 더 짧은 주소 쓰기.
