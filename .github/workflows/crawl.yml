@@ -1,0 +1,32 @@
+name: crawl
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 매일 09:00 KST
+  workflow_dispatch: # Actions 탭에서 수동 실행
+
+permissions:
+  contents: write # data/tools.json 커밋
+
+concurrency: crawl # 수동 실행과 예약 실행이 겹쳐 같은 날 기록이 두 번 쌓이지 않게
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: node --test lib/
+      - run: node scripts/crawl.ts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tools.json
+          git diff --cached --quiet && exit 0
+          git commit -m "data: 크롤링 $(date -u +%F)"
+          git push
