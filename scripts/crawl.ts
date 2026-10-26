@@ -1,10 +1,11 @@
 // 매일 실행: 추적 중인 리포를 갱신하고, 토픽 검색으로 새 리포를 찾아 data/tools.json에 쓴다.
 // 실행: GITHUB_TOKEN=... node scripts/crawl.ts
 import { readFile, writeFile } from "node:fs/promises";
-import { applyRepo, type Repo } from "../lib/merge.ts";
+import { applyRepo, isRelevant, type Repo } from "../lib/merge.ts";
 import type { Category, Tool } from "../lib/types.ts";
 
 const FILE = new URL("../data/tools.json", import.meta.url);
+const EXCLUDED_FILE = new URL("../data/excluded.json", import.meta.url);
 const MIN_STARS = 300;
 const ACTIVE_DAYS = 90;
 const DISCOVER: { topic: string; category: Category }[] = [
@@ -28,11 +29,16 @@ async function gh<T>(path: string): Promise<T> {
 }
 
 const data = JSON.parse(await readFile(FILE, "utf8")) as { updatedAt: string; tools: Tool[] };
-const byRepo = new Map(data.tools.map((t) => [t.repo.toLowerCase(), t]));
+const excluded = new Set(
+  (JSON.parse(await readFile(EXCLUDED_FILE, "utf8")) as { repo: string }[]).map((e) => e.repo.toLowerCase()),
+);
+const byRepo = new Map(
+  data.tools.filter((t) => !excluded.has(t.repo.toLowerCase())).map((t) => [t.repo.toLowerCase(), t]),
+);
 const sameDay = data.updatedAt.slice(0, 10) === new Date().toISOString().slice(0, 10);
 let updated = 0;
 
-for (const t of data.tools) {
+for (const t of [...byRepo.values()]) {
   try {
     const next = applyRepo(t, await gh<Repo>(`/repos/${t.repo}`), t.category, sameDay);
     // 이름이 바뀐 리포는 GitHub이 새 이름으로 돌려준다. 새 키로 옮겨야 검색 결과와 중복되지 않는다.
@@ -52,7 +58,7 @@ for (const { topic, category } of DISCOVER) {
     const { items } = await gh<{ items: Repo[] }>(`/search/repositories?q=${q}&sort=stars&per_page=20`);
     for (const r of items) {
       const key = r.full_name.toLowerCase();
-      if (byRepo.has(key)) continue;
+      if (byRepo.has(key) || excluded.has(key) || !isRelevant(r, category)) continue;
       byRepo.set(key, applyRepo(undefined, r, category));
       added++;
     }

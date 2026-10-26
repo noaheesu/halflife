@@ -13,6 +13,12 @@ export type Repo = {
   topics?: string[];
 };
 
+// mcp-server 토픽은 관련 없는 리포도 인기 때문에 붙이는 경우가 많다. 이름이나 설명에 MCP가 없으면 뺀다.
+export function isRelevant(r: Repo, category: Category): boolean {
+  if (category !== "mcp") return true;
+  return /\bmcp\b|model context protocol/i.test(`${r.full_name} ${r.description ?? ""}`.replace(/[-_/]/g, " "));
+}
+
 // 사람이 고친 필드(이름, 설명, 카테고리, 태그)는 유지하고 수치만 GitHub 값으로 갱신한다.
 // sameDay: 직전 크롤링이 오늘이면 기록을 새로 쌓지 않고 마지막 칸을 덮어쓴다 (하루 1칸 유지).
 export function applyRepo(prev: Tool | undefined, r: Repo, category: Category, sameDay = false): Tool {

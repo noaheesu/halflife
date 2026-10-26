@@ -1,0 +1,14 @@
+[
+  { "repo": "n8n-io/n8n", "reason": "Workflow platform. The MCP integration is czlonkowski/n8n-mcp." },
+  { "repo": "google-gemini/gemini-cli", "reason": "Separate coding agent, not a Claude tool." },
+  { "repo": "D4Vinci/Scrapling", "reason": "General scraping framework." },
+  { "repo": "koala73/worldmonitor", "reason": "News dashboard tagged with mcp-server." },
+  { "repo": "sansan0/TrendRadar", "reason": "Trend monitoring app." },
+  { "repo": "reactive-resume/reactive-resume", "reason": "Resume builder." },
+  { "repo": "pascalorg/editor", "reason": "3D architectural editor." },
+  { "repo": "bytedance/UI-TARS-desktop", "reason": "Standalone multimodal agent." },
+  { "repo": "assafelovic/gpt-researcher", "reason": "Standalone research agent." },
+  { "repo": "NousResearch/hermes-agent", "reason": "Standalone agent, not a Claude tool." },
+  { "repo": "CherryHQ/cherry-studio", "reason": "Standalone AI chat app." },
+  { "repo": "ArcReel/ArcReel", "reason": "Video production workbench." }
+]

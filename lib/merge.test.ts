@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { applyRepo, type Repo } from "./merge.ts";
+import { applyRepo, isRelevant, type Repo } from "./merge.ts";
 import type { Tool } from "./types.ts";
 
 const repo: Repo = {
@@ -38,4 +38,14 @@ test("스타 기록은 최근 30개만 남긴다", () => {
   assert.equal(t.starHistory.length, 30);
   assert.equal(t.starHistory.at(-1), 120);
   assert.equal(t.starHistory[0], 1);
+});
+
+test("MCP 카테고리는 이름이나 설명에 MCP가 있어야 한다", () => {
+  const r = (full_name: string, description: string | null): Repo => ({ ...repo, full_name, description });
+  assert.equal(isRelevant(r("github/github-mcp-server", "GitHub's official server"), "mcp"), true);
+  assert.equal(isRelevant(r("x/tool", "An MCP toolkit"), "mcp"), true);
+  assert.equal(isRelevant(r("x/sdk", "SDK for Model Context Protocol servers"), "mcp"), true);
+  assert.equal(isRelevant(r("n8n-io/n8n", "Workflow automation platform"), "mcp"), false);
+  assert.equal(isRelevant(r("x/mcpherson", "A camera app"), "mcp"), false);
+  assert.equal(isRelevant(r("n8n-io/n8n", null), "skills"), true);
 });

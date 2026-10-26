@@ -1,84 +1,85 @@
 {
-  "updatedAt": "2026-10-26T03:33:22.139Z",
+  "updatedAt": "2026-10-26T21:50:09.386Z",
   "tools": [
     {
       "id": "awesome-claude-code",
       "name": "awesome-claude-code",
       "repo": "hesreallyhim/awesome-claude-code",
       "description": "Hand-picked list of Claude Code skills, hooks, agents and plugins",
+      "descriptionKo": "스킬, 훅, 에이전트, 플러그인을 사람이 직접 고른 목록",
       "category": "guides",
       "tags": [
         "curated",
         "claude-code"
       ],
-      "stars": 56546,
+      "stars": 56615,
       "starHistory": [
-        56546
+        56615
       ],
       "lastCommit": "2026-10-26",
-      "archived": false,
-      "descriptionKo": "스킬, 훅, 에이전트, 플러그인을 사람이 직접 고른 목록"
+      "archived": false
     },
     {
       "id": "awesome-mcp-servers",
       "name": "awesome-mcp-servers",
       "repo": "punkpeye/awesome-mcp-servers",
       "description": "MCP servers organized by category",
-      "category": "mcp",
+      "descriptionKo": "MCP 서버 분야별 모음",
+      "category": "guides",
       "tags": [
         "mcp",
         "directory"
       ],
-      "stars": 96871,
+      "stars": 96906,
       "starHistory": [
-        96871
+        96906
       ],
       "lastCommit": "2026-10-23",
-      "archived": false,
-      "descriptionKo": "MCP 서버 분야별 모음"
+      "archived": false
     },
     {
       "id": "playwright-mcp",
       "name": "Playwright MCP",
       "repo": "microsoft/playwright-mcp",
       "description": "Browser automation server that reads pages through the accessibility tree",
+      "descriptionKo": "접근성 트리로 웹 페이지를 읽고 조작하는 브라우저 자동화 서버",
       "category": "mcp",
       "tags": [
         "browser",
         "automation"
       ],
-      "stars": 38635,
+      "stars": 38667,
       "starHistory": [
-        38635
+        38667
       ],
       "lastCommit": "2026-10-22",
-      "archived": false,
-      "descriptionKo": "접근성 트리로 웹 페이지를 읽고 조작하는 브라우저 자동화 서버"
+      "archived": false
     },
     {
       "id": "context7",
       "name": "Context7",
       "repo": "upstash/context7",
       "description": "MCP server that puts up-to-date library docs into your prompt",
+      "descriptionKo": "라이브러리 최신 문서를 프롬프트에 넣어주는 MCP 서버",
       "category": "mcp",
       "tags": [
         "docs",
         "context"
       ],
-      "stars": 63684,
+      "stars": 63733,
       "starHistory": [
-        63684
+        63733
       ],
-      "lastCommit": "2026-10-23",
-      "archived": false,
-      "descriptionKo": "라이브러리 최신 문서를 프롬프트에 넣어주는 MCP 서버"
+      "lastCommit": "2026-10-26",
+      "archived": false
     },
     {
       "id": "awesome-claude-plugins",
       "name": "awesome-claude-plugins",
       "repo": "composio-community/awesome-claude-plugins",
       "description": "Community marketplace you can add with /plugin marketplace add",
-      "category": "claude-code",
+      "descriptionKo": "/plugin marketplace add 로 바로 쓰는 커뮤니티 마켓",
+      "category": "guides",
       "tags": [
         "plugins",
         "marketplace"
@@ -88,26 +89,25 @@
         1965
       ],
       "lastCommit": "2026-07-26",
-      "archived": false,
-      "descriptionKo": "/plugin marketplace add 로 바로 쓰는 커뮤니티 마켓"
+      "archived": false
     },
     {
       "id": "anthropic-skills",
       "name": "Anthropic Skills",
       "repo": "anthropics/skills",
       "description": "Official Agent Skills examples (documents, design, dev tools)",
+      "descriptionKo": "공식 Agent Skills 예제 모음 (문서, 디자인, 개발 도구)",
       "category": "skills",
       "tags": [
         "skills",
         "official"
       ],
-      "stars": 183787,
+      "stars": 183969,
       "starHistory": [
-        183787
+        183969
       ],
       "lastCommit": "2026-10-09",
-      "archived": false,
-      "descriptionKo": "공식 Agent Skills 예제 모음 (문서, 디자인, 개발 도구)"
+      "archived": false
     },
     {
       "id": "morluto-rea",
@@ -120,11 +120,11 @@
         "ai-agents",
         "binary-analysis"
       ],
-      "stars": 385478,
+      "stars": 391168,
       "starHistory": [
-        385478
+        391168
       ],
-      "lastCommit": "2026-10-25",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -138,27 +138,9 @@
         "anthropic",
         "claude"
       ],
-      "stars": 288930,
+      "stars": 289741,
       "starHistory": [
-        288930
-      ],
-      "lastCommit": "2026-10-25",
-      "archived": false
-    },
-    {
-      "id": "nousresearch-hermes-agent",
-      "name": "hermes-agent",
-      "repo": "NousResearch/hermes-agent",
-      "description": "The agent that grows with you",
-      "category": "claude-code",
-      "tags": [
-        "ai",
-        "ai-agent",
-        "ai-agents"
-      ],
-      "stars": 257093,
-      "starHistory": [
-        257093
+        289741
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -174,9 +156,9 @@
         "ai-agents",
         "claude"
       ],
-      "stars": 176266,
+      "stars": 177047,
       "starHistory": [
-        176266
+        177047
       ],
       "lastCommit": "2026-10-18",
       "archived": false
@@ -192,9 +174,9 @@
         "claude-code",
         "codex"
       ],
-      "stars": 148675,
+      "stars": 148956,
       "starHistory": [
-        148675
+        148956
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -204,17 +186,17 @@
       "name": "ui-ux-pro-max-skill",
       "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
       "description": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
-      "category": "claude-code",
+      "category": "skills",
       "tags": [
         "ai-skills",
         "antigravity",
         "claude"
       ],
-      "stars": 140429,
+      "stars": 140875,
       "starHistory": [
-        140429
+        140875
       ],
-      "lastCommit": "2026-10-23",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -228,11 +210,11 @@
         "antigravity",
         "ast"
       ],
-      "stars": 135378,
+      "stars": 136066,
       "starHistory": [
-        135378
+        136066
       ],
-      "lastCommit": "2026-10-23",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -240,17 +222,17 @@
       "name": "caveman",
       "repo": "JuliusBrussee/caveman",
       "description": "🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.",
-      "category": "claude-code",
+      "category": "skills",
       "tags": [
         "ai",
         "anthropic",
         "caveman"
       ],
-      "stars": 115082,
+      "stars": 115282,
       "starHistory": [
-        115082
+        115282
       ],
-      "lastCommit": "2026-10-25",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -258,15 +240,15 @@
       "name": "agent-skills",
       "repo": "addyosmani/agent-skills",
       "description": "Production-grade engineering skills for AI coding agents.",
-      "category": "claude-code",
+      "category": "skills",
       "tags": [
         "agent-skills",
         "antigravity",
         "claude-code"
       ],
-      "stars": 110543,
+      "stars": 110775,
       "starHistory": [
-        110543
+        110775
       ],
       "lastCommit": "2026-10-13",
       "archived": false
@@ -276,15 +258,15 @@
       "name": "paperclip",
       "repo": "paperclipai/paperclip",
       "description": "The open-source app everyone uses to manage agents at work",
-      "category": "claude-code",
+      "category": "agents",
       "tags": [
         "acpx",
         "agent-orchestration",
         "agent-skills"
       ],
-      "stars": 107343,
+      "stars": 107623,
       "starHistory": [
-        107343
+        107623
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -294,15 +276,15 @@
       "name": "orca",
       "repo": "stablyai/orca",
       "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
-      "category": "claude-code",
+      "category": "agents",
       "tags": [
         "ade",
         "agent-ide",
         "ai-agents"
       ],
-      "stars": 105997,
+      "stars": 106965,
       "starHistory": [
-        105997
+        106965
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -318,11 +300,11 @@
         "ai-agents",
         "ai-memory"
       ],
-      "stars": 103157,
+      "stars": 103391,
       "starHistory": [
-        103157
+        103391
       ],
-      "lastCommit": "2026-10-25",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -330,15 +312,15 @@
       "name": "taste-skill",
       "repo": "Leonxlnx/taste-skill",
       "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
-      "category": "claude-code",
+      "category": "skills",
       "tags": [
         "agent-skills",
         "ai-agents",
         "anti-slop"
       ],
-      "stars": 102553,
+      "stars": 102959,
       "starHistory": [
-        102553
+        102959
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -354,9 +336,9 @@
         "ai-agent",
         "ai-search"
       ],
-      "stars": 102552,
+      "stars": 103433,
       "starHistory": [
-        102552
+        103433
       ],
       "lastCommit": "2026-10-25",
       "archived": false
@@ -366,17 +348,17 @@
       "name": "archify",
       "repo": "tt-a1i/archify",
       "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-      "category": "claude-code",
+      "category": "skills",
       "tags": [
         "agent-skills",
         "ai-agents",
         "architecture-diagram"
       ],
-      "stars": 89281,
+      "stars": 89753,
       "starHistory": [
-        89281
+        89753
       ],
-      "lastCommit": "2026-10-25",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -390,11 +372,11 @@
         "business-knowledge",
         "claude-code"
       ],
-      "stars": 88271,
+      "stars": 88395,
       "starHistory": [
-        88271
+        88395
       ],
-      "lastCommit": "2026-10-22",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -408,11 +390,11 @@
         "ai-coding",
         "anthropic"
       ],
-      "stars": 84554,
+      "stars": 84642,
       "starHistory": [
-        84554
+        84642
       ],
-      "lastCommit": "2026-10-25",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -426,9 +408,9 @@
         "ai-agents",
         "ai-gateway"
       ],
-      "stars": 81185,
+      "stars": 81492,
       "starHistory": [
-        81185
+        81492
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -438,15 +420,15 @@
       "name": "learn-claude-code",
       "repo": "shareAI-lab/learn-claude-code",
       "description": "Bash is all you need -  A nano claude code–like 「agent harness」, built from 0 to 1",
-      "category": "claude-code",
+      "category": "guides",
       "tags": [
         "agent",
         "agent-development",
         "ai-agent"
       ],
-      "stars": 79226,
+      "stars": 79274,
       "starHistory": [
-        79226
+        79274
       ],
       "lastCommit": "2026-09-28",
       "archived": false
@@ -456,89 +438,17 @@
       "name": "awesome-claude-skills",
       "repo": "ComposioHQ/awesome-claude-skills",
       "description": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
-      "category": "claude-code",
+      "category": "guides",
       "tags": [
         "agent-skills",
         "ai-agents",
         "antigravity"
       ],
-      "stars": 77946,
+      "stars": 78006,
       "starHistory": [
-        77946
+        78006
       ],
       "lastCommit": "2026-09-18",
-      "archived": false
-    },
-    {
-      "id": "n8n-io-n8n",
-      "name": "n8n",
-      "repo": "n8n-io/n8n",
-      "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
-      "category": "mcp",
-      "tags": [
-        "ai",
-        "apis",
-        "automation"
-      ],
-      "stars": 208603,
-      "starHistory": [
-        208603
-      ],
-      "lastCommit": "2026-10-26",
-      "archived": false
-    },
-    {
-      "id": "google-gemini-gemini-cli",
-      "name": "gemini-cli",
-      "repo": "google-gemini/gemini-cli",
-      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
-      "category": "mcp",
-      "tags": [
-        "ai",
-        "ai-agents",
-        "cli"
-      ],
-      "stars": 108387,
-      "starHistory": [
-        108387
-      ],
-      "lastCommit": "2026-10-26",
-      "archived": false
-    },
-    {
-      "id": "d4vinci-scrapling",
-      "name": "Scrapling",
-      "repo": "D4Vinci/Scrapling",
-      "description": "🕷️ A Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
-      "category": "mcp",
-      "tags": [
-        "ai",
-        "ai-scraping",
-        "automation"
-      ],
-      "stars": 89722,
-      "starHistory": [
-        89722
-      ],
-      "lastCommit": "2026-10-22",
-      "archived": false
-    },
-    {
-      "id": "koala73-worldmonitor",
-      "name": "worldmonitor",
-      "repo": "koala73/worldmonitor",
-      "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
-      "category": "mcp",
-      "tags": [
-        "agent",
-        "ai",
-        "dashboard"
-      ],
-      "stars": 89530,
-      "starHistory": [
-        89530
-      ],
-      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -546,35 +456,17 @@
       "name": "ruflo",
       "repo": "ruvnet/ruflo",
       "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
-      "category": "mcp",
+      "category": "agents",
       "tags": [
         "agentic-ai",
         "agentic-framework",
         "agentic-workflow"
       ],
-      "stars": 79315,
+      "stars": 79508,
       "starHistory": [
-        79315
+        79508
       ],
       "lastCommit": "2026-10-26",
-      "archived": false
-    },
-    {
-      "id": "sansan0-trendradar",
-      "name": "TrendRadar",
-      "repo": "sansan0/TrendRadar",
-      "description": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
-      "category": "mcp",
-      "tags": [
-        "ai",
-        "bark",
-        "data-analysis"
-      ],
-      "stars": 63179,
-      "starHistory": [
-        63179
-      ],
-      "lastCommit": "2026-10-20",
       "archived": false
     },
     {
@@ -588,11 +480,11 @@
         "chrome",
         "chrome-devtools"
       ],
-      "stars": 54152,
+      "stars": 54205,
       "starHistory": [
-        54152
+        54205
       ],
-      "lastCommit": "2026-10-25",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -606,47 +498,11 @@
         "ast",
         "claude-code"
       ],
-      "stars": 47481,
+      "stars": 47560,
       "starHistory": [
-        47481
+        47560
       ],
       "lastCommit": "2026-10-26",
-      "archived": false
-    },
-    {
-      "id": "reactive-resume-reactive-resume",
-      "name": "reactive-resume",
-      "repo": "reactive-resume/reactive-resume",
-      "description": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
-      "category": "mcp",
-      "tags": [
-        "agent-skills",
-        "ai",
-        "dsh-plugin"
-      ],
-      "stars": 44857,
-      "starHistory": [
-        44857
-      ],
-      "lastCommit": "2026-10-25",
-      "archived": false
-    },
-    {
-      "id": "bytedance-ui-tars-desktop",
-      "name": "UI-TARS-desktop",
-      "repo": "bytedance/UI-TARS-desktop",
-      "description": "The Open-Source Multimodal AI Agent Stack: Connecting Cutting-Edge AI Models and Agent Infra",
-      "category": "mcp",
-      "tags": [
-        "agent",
-        "agent-tars",
-        "browser-use"
-      ],
-      "stars": 39388,
-      "starHistory": [
-        39388
-      ],
-      "lastCommit": "2026-10-09",
       "archived": false
     },
     {
@@ -660,9 +516,9 @@
         "architecture-diagram",
         "claude-code"
       ],
-      "stars": 36411,
+      "stars": 36423,
       "starHistory": [
-        36411
+        36423
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -678,9 +534,9 @@
         "mcp",
         "mcp-server"
       ],
-      "stars": 33957,
+      "stars": 33984,
       "starHistory": [
-        33957
+        33984
       ],
       "lastCommit": "2026-10-23",
       "archived": false
@@ -696,9 +552,9 @@
         "claude",
         "claude-code"
       ],
-      "stars": 32284,
+      "stars": 32420,
       "starHistory": [
-        32284
+        32420
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -714,29 +570,11 @@
         "ai",
         "ai-coding"
       ],
-      "stars": 30717,
+      "stars": 30735,
       "starHistory": [
-        30717
+        30735
       ],
-      "lastCommit": "2026-10-20",
-      "archived": false
-    },
-    {
-      "id": "assafelovic-gpt-researcher",
-      "name": "gpt-researcher",
-      "repo": "assafelovic/gpt-researcher",
-      "description": "An autonomous agent that conducts deep research on any data using any LLM providers",
-      "category": "mcp",
-      "tags": [
-        "agent",
-        "ai",
-        "automation"
-      ],
-      "stars": 30292,
-      "starHistory": [
-        30292
-      ],
-      "lastCommit": "2026-10-10",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -750,29 +588,11 @@
         "ai-agent-tools",
         "ai-agents"
       ],
-      "stars": 25226,
+      "stars": 25235,
       "starHistory": [
-        25226
+        25235
       ],
       "lastCommit": "2026-10-26",
-      "archived": false
-    },
-    {
-      "id": "pascalorg-editor",
-      "name": "editor",
-      "repo": "pascalorg/editor",
-      "description": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents.",
-      "category": "mcp",
-      "tags": [
-        "3d",
-        "agent-skills",
-        "ai-agents"
-      ],
-      "stars": 25111,
-      "starHistory": [
-        25111
-      ],
-      "lastCommit": "2026-10-25",
       "archived": false
     },
     {
@@ -786,9 +606,9 @@
         "mcp-client",
         "mcp-server"
       ],
-      "stars": 24666,
+      "stars": 24676,
       "starHistory": [
-        24666
+        24676
       ],
       "lastCommit": "2026-10-25",
       "archived": false
@@ -804,11 +624,11 @@
         "mcp-server",
         "n8n"
       ],
-      "stars": 23136,
+      "stars": 23143,
       "starHistory": [
-        23136
+        23143
       ],
-      "lastCommit": "2026-10-25",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -822,9 +642,9 @@
         "ai-design",
         "byok"
       ],
-      "stars": 103978,
+      "stars": 104146,
       "starHistory": [
-        103978
+        104146
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -840,9 +660,9 @@
         "ai-agent",
         "ai-job-search"
       ],
-      "stars": 77313,
+      "stars": 77607,
       "starHistory": [
-        77313
+        77607
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -858,11 +678,11 @@
         "claude-code",
         "codex"
       ],
-      "stars": 61092,
+      "stars": 61358,
       "starHistory": [
-        61092
+        61358
       ],
-      "lastCommit": "2026-10-25",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -876,9 +696,9 @@
         "ai-humanizer",
         "ai-writing"
       ],
-      "stars": 60631,
+      "stars": 61000,
       "starHistory": [
-        60631
+        61000
       ],
       "lastCommit": "2026-10-16",
       "archived": false
@@ -894,11 +714,11 @@
         "ai-agents",
         "ai-seo"
       ],
-      "stars": 56547,
+      "stars": 56678,
       "starHistory": [
-        56547
+        56678
       ],
-      "lastCommit": "2026-10-22",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -912,11 +732,11 @@
         "ai-scientist",
         "bioinformatics"
       ],
-      "stars": 54607,
+      "stars": 54760,
       "starHistory": [
-        54607
+        54760
       ],
-      "lastCommit": "2026-10-19",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -924,35 +744,17 @@
       "name": "awesome-openclaw-skills",
       "repo": "VoltAgent/awesome-openclaw-skills",
       "description": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
-      "category": "skills",
+      "category": "guides",
       "tags": [
         "agent-skills",
         "awesome",
         "awesome-list"
       ],
-      "stars": 53350,
+      "stars": 53361,
       "starHistory": [
-        53350
+        53361
       ],
       "lastCommit": "2026-10-19",
-      "archived": false
-    },
-    {
-      "id": "cherryhq-cherry-studio",
-      "name": "cherry-studio",
-      "repo": "CherryHQ/cherry-studio",
-      "description": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs",
-      "category": "skills",
-      "tags": [
-        "agent-skills",
-        "ai-agent",
-        "claude-code"
-      ],
-      "stars": 52982,
-      "starHistory": [
-        52982
-      ],
-      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -960,15 +762,15 @@
       "name": "agentic-awesome-skills",
       "repo": "sickn33/agentic-awesome-skills",
       "description": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 2,750+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
-      "category": "skills",
+      "category": "guides",
       "tags": [
         "agent-skills",
         "agentic-skills",
         "ai-agent-skills"
       ],
-      "stars": 48505,
+      "stars": 48544,
       "starHistory": [
-        48505
+        48544
       ],
       "lastCommit": "2026-10-24",
       "archived": false
@@ -984,29 +786,11 @@
         "agent-skills",
         "code-review"
       ],
-      "stars": 48275,
+      "stars": 48358,
       "starHistory": [
-        48275
+        48358
       ],
       "lastCommit": "2026-10-22",
-      "archived": false
-    },
-    {
-      "id": "arcreel-arcreel",
-      "name": "ArcReel",
-      "repo": "ArcReel/ArcReel",
-      "description": "AI Agent 驱动的开源可自部署视频工作台：将小说与剧本转为角色、场景、道具资产、分镜、视频和剪映草稿，支持跨镜头一致性、多供应商与费用追踪 | Self-hosted AI video workspace for stories, storyboards and short-form video production",
-      "category": "agents",
-      "tags": [
-        "agentic-workflow",
-        "ai-agent",
-        "ai-animation"
-      ],
-      "stars": 5722,
-      "starHistory": [
-        5722
-      ],
-      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -1020,9 +804,9 @@
         "agents",
         "ai"
       ],
-      "stars": 4466,
+      "stars": 4470,
       "starHistory": [
-        4466
+        4470
       ],
       "lastCommit": "2026-10-25",
       "archived": false
@@ -1038,9 +822,9 @@
         "ai-coding",
         "aider"
       ],
-      "stars": 2157,
+      "stars": 2158,
       "starHistory": [
-        2157
+        2158
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -1056,9 +840,9 @@
         "ai-agents",
         "ai-memory"
       ],
-      "stars": 1635,
+      "stars": 1637,
       "starHistory": [
-        1635
+        1637
       ],
       "lastCommit": "2026-10-24",
       "archived": false
@@ -1110,9 +894,9 @@
         "agent-infrastructure",
         "agent-os"
       ],
-      "stars": 944,
+      "stars": 947,
       "starHistory": [
-        944
+        947
       ],
       "lastCommit": "2026-10-26",
       "archived": false
@@ -1128,11 +912,11 @@
         "claude",
         "claude-agent-sdk"
       ],
-      "stars": 829,
+      "stars": 830,
       "starHistory": [
-        829
+        830
       ],
-      "lastCommit": "2026-10-11",
+      "lastCommit": "2026-10-26",
       "archived": false
     },
     {
@@ -1182,9 +966,9 @@
         "ai-prompts",
         "ai-video-generation"
       ],
-      "stars": 576,
+      "stars": 581,
       "starHistory": [
-        576
+        581
       ],
       "lastCommit": "2026-09-16",
       "archived": false
