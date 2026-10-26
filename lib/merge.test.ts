@@ -1,0 +1,35 @@
+import assert from "node:assert/strict";
+import { test } from "node:test";
+import { applyRepo, type Repo } from "./merge.ts";
+import type { Tool } from "./types.ts";
+
+const repo: Repo = {
+  full_name: "Owner/Cool-MCP", name: "Cool-MCP", description: "A cool server", stargazers_count: 120,
+  pushed_at: "2026-10-20T12:00:00Z", archived: false, topics: ["mcp", "browser", "ai", "extra"],
+};
+
+test("새 리포는 GitHub 정보로 채운다", () => {
+  const t = applyRepo(undefined, repo, "mcp");
+  assert.equal(t.id, "owner-cool-mcp");
+  assert.equal(t.description, "A cool server");
+  assert.deepEqual(t.tags, ["mcp", "browser", "ai"]);
+  assert.deepEqual(t.starHistory, [120]);
+  assert.equal(t.lastCommit, "2026-10-20");
+});
+
+test("기존 리포는 사람이 쓴 설명을 유지하고 수치만 갱신한다", () => {
+  const prev: Tool = { ...applyRepo(undefined, repo, "mcp"), description: "한국어 설명", category: "agents" };
+  const t = applyRepo(prev, { ...repo, stargazers_count: 150, archived: true }, "mcp");
+  assert.equal(t.description, "한국어 설명");
+  assert.equal(t.category, "agents");
+  assert.deepEqual(t.starHistory, [120, 150]);
+  assert.equal(t.archived, true);
+});
+
+test("스타 기록은 최근 30개만 남긴다", () => {
+  const prev: Tool = { ...applyRepo(undefined, repo, "mcp"), starHistory: Array.from({ length: 30 }, (_, i) => i) };
+  const t = applyRepo(prev, repo, "mcp");
+  assert.equal(t.starHistory.length, 30);
+  assert.equal(t.starHistory.at(-1), 120);
+  assert.equal(t.starHistory[0], 1);
+});
