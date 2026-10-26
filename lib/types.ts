@@ -20,6 +20,7 @@ export type Swap = {
   to: { name: string; detail: string };
   reason: string;
   effort: string;
+  match: string[]; // 설정 파일에서 기존 도구를 알아보는 키워드 (패키지명 등)
 };
 
 // gainDays: starGain을 계산한 기간. 기록이 7일보다 짧으면 그만큼만.

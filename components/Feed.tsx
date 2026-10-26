@@ -99,7 +99,7 @@ export default function Feed({ tools, swaps, updatedAt }: { tools: RankedTool[];
             </section>
           </main>
 
-          <StackPanel />
+          <StackPanel tools={tools} swaps={swaps} />
         </div>
       </div>
     </>
