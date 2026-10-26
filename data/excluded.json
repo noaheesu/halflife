@@ -10,5 +10,6 @@
   { "repo": "assafelovic/gpt-researcher", "reason": "Standalone research agent." },
   { "repo": "NousResearch/hermes-agent", "reason": "Standalone agent, not a Claude tool." },
   { "repo": "CherryHQ/cherry-studio", "reason": "Standalone AI chat app." },
-  { "repo": "ArcReel/ArcReel", "reason": "Video production workbench." }
+  { "repo": "ArcReel/ArcReel", "reason": "Video production workbench." },
+  { "repo": "cdxiaodong/cain-agent", "reason": "Standalone pentest agent built on the Agent SDK, not part of a Claude setup." }
 ]

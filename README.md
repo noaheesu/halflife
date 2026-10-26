@@ -56,6 +56,5 @@ data/
 2. 휴대폰 화면: 375px·320px 폭 iframe으로 가로 넘침이 없는 것까지 확인했다. 실제 기기에서는 아직 보지 못했다.
 3. 교체 추천 9건(보관 처리된 MCP 참조 서버 위주). 남은 후보: gdrive, google-maps, sqlite처럼 뚜렷한 대체재가 아직 없는 서버, 그리고 MCP 말고 Skills/Agents 카테고리.
 4. Claude API 키가 생기면: 크롤링한 리포의 한국어 설명 자동 생성, 관리가 끊긴 도구의 대안 자동 추천.
-5. 경계에 있는 리포 검토: career-ops, open-design, cain-agent.
-6. Vercel 프로젝트 이름을 바꿔 더 짧은 주소 쓰기.
-7. `gh` 토큰에 남은 `delete_repo` 권한 회수: `gh auth refresh -h github.com -r delete_repo`
+5. Vercel 프로젝트 이름을 바꿔 더 짧은 주소 쓰기.
+6. `gh` 토큰에 남은 `delete_repo` 권한 회수: `gh auth refresh -h github.com -r delete_repo`

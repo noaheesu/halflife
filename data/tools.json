@@ -636,7 +636,7 @@
       "name": "open-design",
       "repo": "nexu-io/open-design",
       "description": "The 1st Collaborative AI Design Agent Workspace. Local-first and open source. Create motion, prototypes, websites, apps, dashboards, presentations, images, and videos with your team and AI agents. Share work, exchange feedback, and iterate together in one workspace.",
-      "category": "skills",
+      "category": "agents",
       "tags": [
         "agent-skills",
         "ai-design",
@@ -863,24 +863,6 @@
         997
       ],
       "lastCommit": "2026-10-26",
-      "archived": false
-    },
-    {
-      "id": "cdxiaodong-cain-agent",
-      "name": "cain-agent",
-      "repo": "cdxiaodong/cain-agent",
-      "description": "Real-world AI penetration testing engineer for authorized assessments — built-in cloud module covering AWS/Azure/GCP + Aliyun/Tencent/Huawei clouds. Built on Claude Agent SDK",
-      "category": "agents",
-      "tags": [
-        "ai-agent",
-        "aliyun",
-        "aws"
-      ],
-      "stars": 945,
-      "starHistory": [
-        945
-      ],
-      "lastCommit": "2026-10-14",
       "archived": false
     },
     {
