@@ -63,7 +63,7 @@ data/
 3. 15 replacement suggestions: archived MCP reference servers, plus vendors that moved to hosted or Streamable HTTP endpoints (Notion, Linear, Atlassian). No clear successor yet: gdrive (main fork requires starring in its license), sqlite. `tools.json` itself has almost no swap candidates because the crawler only picks repos active in the last 90 days; new swaps come from outside research. v1 is done once items 1, 2 and 6 are cleared.
 4. With a Claude API key: auto-generate Korean descriptions for crawled repos and auto-suggest alternatives for unmaintained tools.
 5. Rename the Vercel project for a shorter URL.
-6. Revoke the leftover `delete_repo` scope on the `gh` token: `gh auth refresh -h github.com -r delete_repo`
+6. `delete_repo` scope removed from the `gh` token on 2026-10-29. Done. (`gh auth refresh -r` did not drop it; revoking GitHub CLI under github.com/settings/applications and running `gh auth login` again did.)
 
 ---
 
@@ -128,4 +128,4 @@ data/
 3. 교체 추천 15건: 보관 처리된 MCP 참조 서버, 그리고 호스팅·Streamable HTTP 주소로 옮긴 업체(Notion, Linear, Atlassian). 뚜렷한 대체재가 없는 것: gdrive(대표 포크는 라이선스에 스타 필수 조건), sqlite. 크롤러가 최근 90일 안에 활동한 리포만 모으기 때문에 `tools.json` 안에는 교체 후보가 거의 없다. 새 교체 추천은 외부 조사로 찾는다. 1, 2, 6번만 처리하면 v1 완료.
 4. Claude API 키가 생기면: 크롤링한 리포의 한국어 설명 자동 생성, 관리가 끊긴 도구의 대안 자동 추천.
 5. Vercel 프로젝트 이름을 바꿔 더 짧은 주소 쓰기.
-6. `gh` 토큰에 남은 `delete_repo` 권한 회수: `gh auth refresh -h github.com -r delete_repo`
+6. 2026-10-29 `gh` 토큰에서 `delete_repo` 권한 제거. 완료. (`gh auth refresh -r`로는 빠지지 않았고, github.com/settings/applications에서 GitHub CLI 허락을 취소한 뒤 `gh auth login`을 다시 해서 해결.)
