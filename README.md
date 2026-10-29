@@ -59,7 +59,7 @@ data/
 ### To do
 
 1. Vercel Hobby skips commits authored by `github-actions[bot]`, so the workflow calls a Deploy Hook after pushing. Needs the `VERCEL_DEPLOY_HOOK` repo secret (Vercel → molt-tools → Settings → Git → Deploy Hooks). Confirmed working on 2026-10-29. Delete the leftover `halflife` Vercel project.
-2. Mobile: no horizontal overflow confirmed in 375px and 320px iframes. Not yet checked on a real device.
+2. Mobile: confirmed on a real phone on 2026-10-29. Done.
 3. 15 replacement suggestions: archived MCP reference servers, plus vendors that moved to hosted or Streamable HTTP endpoints (Notion, Linear, Atlassian). No clear successor yet: gdrive (main fork requires starring in its license), sqlite. `tools.json` itself has almost no swap candidates because the crawler only picks repos active in the last 90 days; new swaps come from outside research. v1 is done once items 1, 2 and 6 are cleared.
 4. With a Claude API key: auto-generate Korean descriptions for crawled repos and auto-suggest alternatives for unmaintained tools.
 5. Rename the Vercel project for a shorter URL.
@@ -124,7 +124,7 @@ data/
 ### 남은 일
 
 1. Vercel Hobby는 `github-actions[bot]`이 작성한 커밋을 배포하지 않아서, 워크플로가 푸시 뒤에 Deploy Hook을 호출한다. 리포 시크릿 `VERCEL_DEPLOY_HOOK`이 필요하다(Vercel → molt-tools → Settings → Git → Deploy Hooks). 2026-10-29 동작 확인. 남아 있는 `halflife` Vercel 프로젝트는 삭제.
-2. 휴대폰 화면: 375px·320px 폭 iframe으로 가로 넘침이 없는 것까지 확인했다. 실제 기기에서는 아직 보지 못했다.
+2. 휴대폰 화면: 2026-10-29 실제 폰에서 확인. 완료.
 3. 교체 추천 15건: 보관 처리된 MCP 참조 서버, 그리고 호스팅·Streamable HTTP 주소로 옮긴 업체(Notion, Linear, Atlassian). 뚜렷한 대체재가 없는 것: gdrive(대표 포크는 라이선스에 스타 필수 조건), sqlite. 크롤러가 최근 90일 안에 활동한 리포만 모으기 때문에 `tools.json` 안에는 교체 후보가 거의 없다. 새 교체 추천은 외부 조사로 찾는다. 1, 2, 6번만 처리하면 v1 완료.
 4. Claude API 키가 생기면: 크롤링한 리포의 한국어 설명 자동 생성, 관리가 끊긴 도구의 대안 자동 추천.
 5. Vercel 프로젝트 이름을 바꿔 더 짧은 주소 쓰기.
