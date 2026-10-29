@@ -8,7 +8,7 @@ A website that tracks Claude Code plugins, MCP servers, skills, and agent tools 
 
 *Molt*: shed the old shell, grow into what's alive.
 
-- Site: https://halflife-3tuy.vercel.app (English `/`, Korean `/ko`)
+- Site: https://molt-tools.vercel.app (English `/`, Korean `/ko`)
 - Repo: https://github.com/noaheesu/molt (public)
 - The local folder still uses the old name (`news_crawler`).
 
@@ -73,7 +73,7 @@ Claude Code 플러그인, MCP 서버, 스킬, 에이전트 도구를 매일 추�
 
 *Molt*(탈피): 낡은 껍질을 벗고 살아 있는 것으로 갈아탄다.
 
-- 사이트: https://halflife-3tuy.vercel.app (영어 `/`, 한국어 `/ko`)
+- 사이트: https://molt-tools.vercel.app (영어 `/`, 한국어 `/ko`)
 - 리포: https://github.com/noaheesu/molt (공개)
 - 로컬 폴더 이름은 예전 이름(`news_crawler`) 그대로다.
 
