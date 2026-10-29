@@ -1,4 +1,4 @@
-# Halflife
+# Molt
 
 [English](#english) · [한국어](#한국어)
 
@@ -6,8 +6,10 @@
 
 A website that tracks Claude Code plugins, MCP servers, skills, and agent tools every day, and tells you what to replace stale tools with.
 
+*Molt*: shed the old shell, grow into what's alive.
+
 - Site: https://halflife-3tuy.vercel.app (English `/`, Korean `/ko`)
-- Repo: https://github.com/noaheesu/halflife (public)
+- Repo: https://github.com/noaheesu/molt (public)
 - The local folder still uses the old name (`news_crawler`).
 
 ### Run
@@ -69,8 +71,10 @@ data/
 
 Claude Code 플러그인, MCP 서버, 스킬, 에이전트 도구를 매일 추적하고, 낡은 도구는 무엇으로 바꾸면 되는지 알려주는 웹.
 
+*Molt*(탈피): 낡은 껍질을 벗고 살아 있는 것으로 갈아탄다.
+
 - 사이트: https://halflife-3tuy.vercel.app (영어 `/`, 한국어 `/ko`)
-- 리포: https://github.com/noaheesu/halflife (공개)
+- 리포: https://github.com/noaheesu/molt (공개)
 - 로컬 폴더 이름은 예전 이름(`news_crawler`) 그대로다.
 
 ### 실행

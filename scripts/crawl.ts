@@ -20,7 +20,7 @@ async function gh<T>(path: string): Promise<T> {
   const res = await fetch(`https://api.github.com${path}`, {
     headers: {
       Accept: "application/vnd.github+json",
-      "User-Agent": "halflife-crawler",
+      "User-Agent": "molt-crawler",
       ...(token && { Authorization: `Bearer ${token}` }),
     },
   });

@@ -16,7 +16,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Promise<Metadata> {
   const { lang } = await params;
   return {
-    title: "Halflife",
+    title: "Molt",
     description: isLang(lang) ? dict[lang].metaDescription : undefined,
     alternates: { languages: { en: "/", ko: "/ko" } },
   };

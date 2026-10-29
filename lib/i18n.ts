@@ -14,7 +14,7 @@ const en = {
   searchLabel: "Search tools",
   heroTitle: "The plugin you installed last week might already be outdated",
   heroLead:
-    "Halflife tracks Claude Code plugins, MCP servers, skills and agent tools every day. When a better option shows up, it tells you what to switch to, why, and how much work it is.",
+    "Molt tracks Claude Code plugins, MCP servers, skills and agent tools every day. When a better option shows up, it tells you what to switch to, why, and how much work it is.",
   updated: "Updated",
   tracked: "{n} repos tracked",
   swapCount: "{n} swap suggestions",
@@ -69,7 +69,7 @@ const ko: typeof en = {
   searchLabel: "도구 검색",
   heroTitle: "지난주에 설치한 플러그인이 벌써 구버전일 수 있습니다",
   heroLead:
-    "Halflife는 Claude Code 플러그인, MCP 서버, 스킬, 에이전트 도구를 매일 추적합니다. 더 나은 게 나오면 무엇으로, 왜, 얼마나 쉽게 바꿀 수 있는지 알려줍니다.",
+    "Molt는 Claude Code 플러그인, MCP 서버, 스킬, 에이전트 도구를 매일 추적합니다. 더 나은 게 나오면 무엇으로, 왜, 얼마나 쉽게 바꿀 수 있는지 알려줍니다.",
   updated: "업데이트",
   tracked: "추적 중인 리포 {n}개",
   swapCount: "교체 추천 {n}건",
