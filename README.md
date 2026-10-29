@@ -60,7 +60,7 @@ data/
 
 1. Vercel Hobby skips commits authored by `github-actions[bot]`, so the workflow calls a Deploy Hook after pushing. Needs the `VERCEL_DEPLOY_HOOK` repo secret (Vercel → molt-tools → Settings → Git → Deploy Hooks). Confirmed working on 2026-10-29. Delete the leftover `halflife` Vercel project.
 2. Mobile: no horizontal overflow confirmed in 375px and 320px iframes. Not yet checked on a real device.
-3. 9 replacement suggestions (mostly archived MCP reference servers). Remaining candidates: servers with no clear successor yet such as gdrive, google-maps, sqlite, and the Skills/Agents categories beyond MCP.
+3. 10 replacement suggestions (mostly archived MCP reference servers). Checked candidates: google-maps → Google Maps Grounding Lite (official, experimental), Claude Code SDK → Claude Agent SDK (agents category, `match: []`). No clear successor yet: gdrive (main fork requires starring in its license), sqlite.
 4. With a Claude API key: auto-generate Korean descriptions for crawled repos and auto-suggest alternatives for unmaintained tools.
 5. Rename the Vercel project for a shorter URL.
 6. Revoke the leftover `delete_repo` scope on the `gh` token: `gh auth refresh -h github.com -r delete_repo`
@@ -125,7 +125,7 @@ data/
 
 1. Vercel Hobby는 `github-actions[bot]`이 작성한 커밋을 배포하지 않아서, 워크플로가 푸시 뒤에 Deploy Hook을 호출한다. 리포 시크릿 `VERCEL_DEPLOY_HOOK`이 필요하다(Vercel → molt-tools → Settings → Git → Deploy Hooks). 2026-10-29 동작 확인. 남아 있는 `halflife` Vercel 프로젝트는 삭제.
 2. 휴대폰 화면: 375px·320px 폭 iframe으로 가로 넘침이 없는 것까지 확인했다. 실제 기기에서는 아직 보지 못했다.
-3. 교체 추천 9건(보관 처리된 MCP 참조 서버 위주). 남은 후보: gdrive, google-maps, sqlite처럼 뚜렷한 대체재가 아직 없는 서버, 그리고 MCP 말고 Skills/Agents 카테고리.
+3. 교체 추천 10건(보관 처리된 MCP 참조 서버 위주). 확인해 둔 후보: google-maps → Google Maps Grounding Lite(공식, 실험 단계), Claude Code SDK → Claude Agent SDK(agents 카테고리, `match: []`). 뚜렷한 대체재가 없는 것: gdrive(대표 포크는 라이선스에 스타 필수 조건), sqlite.
 4. Claude API 키가 생기면: 크롤링한 리포의 한국어 설명 자동 생성, 관리가 끊긴 도구의 대안 자동 추천.
 5. Vercel 프로젝트 이름을 바꿔 더 짧은 주소 쓰기.
 6. `gh` 토큰에 남은 `delete_repo` 권한 회수: `gh auth refresh -h github.com -r delete_repo`

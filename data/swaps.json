@@ -142,5 +142,21 @@
     },
     "effort": { "en": "Replace entry, new token", "ko": "항목 교체, 새 토큰" },
     "match": ["server-slack"]
+  },
+  {
+    "id": "aws-kb-reference-to-awslabs",
+    "category": "mcp",
+    "from": {
+      "name": { "en": "AWS KB Retrieval MCP (reference)", "ko": "AWS KB Retrieval MCP (참조 구현)" },
+      "detail": "@modelcontextprotocol/server-aws-kb-retrieval",
+      "status": "archived"
+    },
+    "to": { "name": "Bedrock KB Retrieval MCP Server", "detail": "awslabs/mcp" },
+    "reason": {
+      "en": "The reference server is no longer maintained. AWS's own server finds your knowledge bases on its own instead of taking IDs by hand, can limit search to chosen data sources, and can rerank results.",
+      "ko": "참조 구현은 더 이상 관리되지 않습니다. AWS가 직접 만든 서버는 ID를 손으로 넣지 않아도 지식베이스를 스스로 찾고, 검색할 데이터 소스를 고를 수 있으며, 결과를 다시 순위 매길 수 있습니다."
+    },
+    "effort": { "en": "Replace entry, tag your knowledge base", "ko": "항목 교체, 지식베이스에 태그 추가" },
+    "match": ["server-aws-kb-retrieval"]
   }
 ]
