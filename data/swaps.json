@@ -190,5 +190,53 @@
     },
     "effort": { "en": "Rename package and imports", "ko": "패키지·import 이름 변경" },
     "match": []
+  },
+  {
+    "id": "notion-local-to-hosted",
+    "category": "mcp",
+    "from": {
+      "name": { "en": "Notion MCP (local)", "ko": "Notion MCP (로컬)" },
+      "detail": "@notionhq/notion-mcp-server",
+      "status": "archived"
+    },
+    "to": { "name": "Notion MCP (hosted)", "detail": "https://mcp.notion.com/mcp" },
+    "reason": {
+      "en": "Notion no longer actively maintains the local server and recommends its hosted one. It logs in with OAuth instead of an integration token and updates itself. It lacks a few block-level endpoints, so check those if you edit single blocks.",
+      "ko": "Notion은 로컬 서버를 더 이상 적극적으로 관리하지 않고 호스팅 서버를 권합니다. 통합 토큰 대신 OAuth로 로그인하고 업데이트도 알아서 됩니다. 블록 단위 엔드포인트 몇 개가 없으니 블록 하나씩 고친다면 확인하세요."
+    },
+    "effort": { "en": "Switch to a URL entry", "ko": "URL 항목으로 교체" },
+    "match": ["notionhq/notion-mcp-server"]
+  },
+  {
+    "id": "linear-sse-to-http",
+    "category": "mcp",
+    "from": {
+      "name": { "en": "Linear MCP (SSE endpoint)", "ko": "Linear MCP (SSE 주소)" },
+      "detail": "https://mcp.linear.app/sse",
+      "status": "working"
+    },
+    "to": { "name": "Linear MCP (Streamable HTTP)", "detail": "https://mcp.linear.app/mcp" },
+    "reason": {
+      "en": "Linear is phasing out the SSE endpoint in favor of Streamable HTTP. Claude Code supports the new endpoint directly, so you no longer need the mcp-remote bridge.",
+      "ko": "Linear는 SSE 주소를 단계적으로 없애고 Streamable HTTP로 옮기고 있습니다. Claude Code는 새 주소를 바로 지원하니 mcp-remote 다리가 더 필요 없습니다."
+    },
+    "effort": { "en": "Change the URL", "ko": "URL 변경" },
+    "match": ["mcp.linear.app/sse"]
+  },
+  {
+    "id": "atlassian-sse-to-http",
+    "category": "mcp",
+    "from": {
+      "name": { "en": "Atlassian MCP (SSE endpoint)", "ko": "Atlassian MCP (SSE 주소)" },
+      "detail": "https://mcp.atlassian.com/v1/sse",
+      "status": "archived"
+    },
+    "to": { "name": "Atlassian Rovo MCP", "detail": "https://mcp.atlassian.com/v1/mcp/authv2" },
+    "reason": {
+      "en": "Atlassian stopped supporting the SSE endpoint after June 30, 2026. A common symptom is a server that connects but loads no tools. The current setup docs use the authv2 endpoint.",
+      "ko": "Atlassian은 2026년 6월 30일 이후 SSE 주소 지원을 끝냈습니다. 연결은 되는데 도구가 하나도 안 뜨는 게 흔한 증상입니다. 현재 설정 문서는 authv2 주소를 씁니다."
+    },
+    "effort": { "en": "Change the URL", "ko": "URL 변경" },
+    "match": ["mcp.atlassian.com/v1/sse"]
   }
 ]
