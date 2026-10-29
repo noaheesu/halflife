@@ -158,5 +158,37 @@
     },
     "effort": { "en": "Replace entry, tag your knowledge base", "ko": "항목 교체, 지식베이스에 태그 추가" },
     "match": ["server-aws-kb-retrieval"]
+  },
+  {
+    "id": "google-maps-reference-to-grounding-lite",
+    "category": "mcp",
+    "from": {
+      "name": { "en": "Google Maps MCP (reference)", "ko": "Google Maps MCP (참조 구현)" },
+      "detail": "@modelcontextprotocol/server-google-maps",
+      "status": "archived"
+    },
+    "to": { "name": "Maps Grounding Lite", "detail": "mapstools.googleapis.com/mcp" },
+    "reason": {
+      "en": "The reference server is no longer maintained. Google now runs its own remote MCP server for Maps with place search, weather and routes, so there is nothing to install. It is still experimental.",
+      "ko": "참조 구현은 더 이상 관리되지 않습니다. 이제 Google이 장소 검색, 날씨, 경로를 제공하는 Maps용 원격 MCP 서버를 직접 운영하므로 따로 설치할 것이 없습니다. 아직 실험 단계입니다."
+    },
+    "effort": { "en": "Enable the API, switch to a remote URL", "ko": "API 사용 설정, 원격 URL로 교체" },
+    "match": ["server-google-maps"]
+  },
+  {
+    "id": "claude-code-sdk-to-agent-sdk",
+    "category": "agents",
+    "from": {
+      "name": { "en": "Claude Code SDK", "ko": "Claude Code SDK" },
+      "detail": "@anthropic-ai/claude-code (SDK import), claude-code-sdk",
+      "status": "archived"
+    },
+    "to": { "name": "Claude Agent SDK", "detail": "@anthropic-ai/claude-agent-sdk, claude-agent-sdk" },
+    "reason": {
+      "en": "The SDK was renamed and new features ship only under the new name. Note that it no longer loads Claude Code's system prompt or CLAUDE.md and settings files by default, so turn those on if you relied on them.",
+      "ko": "SDK 이름이 바뀌었고 새 기능은 새 이름으로만 나옵니다. 이제 Claude Code의 시스템 프롬프트와 CLAUDE.md, 설정 파일을 기본으로 불러오지 않으니, 그것에 기대고 있었다면 직접 켜야 합니다."
+    },
+    "effort": { "en": "Rename package and imports", "ko": "패키지·import 이름 변경" },
+    "match": []
   }
 ]
